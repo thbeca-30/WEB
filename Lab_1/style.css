@@ -1,0 +1,35 @@
+h1{
+    color: #fff;
+    font-family: Snell Roundhand, cursive;
+}
+
+select{
+    width: 200px;
+    height: 100px;
+    color: #000000;
+    background: #fff;
+    font-family: Snell Roundhand, cursive;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+select:hover { background: #a0a0a0; }
+select:active { background: #666666; }
+
+
+input {
+    width: 200px;
+    height: 100px;
+    color: #000000;
+    background: #fff;
+    padding: .7px 1.5px;
+    font-family: Snell Roundhand, cursive;
+    font-size: xx-large;
+    font-weight: 900;
+  } 
+input:hover { background: #a0a0a0; }
+input:active { background: #666666; }
+
+form{
+    margin: 20%;
+}
