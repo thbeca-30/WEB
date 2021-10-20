@@ -1,0 +1,46 @@
+{{> head}}
+<body>
+    {{> navbar}}
+    {{#if orders}}
+    
+        {{#each orders}}
+        <div class="cart">
+            {{#each _carts}}
+                <div class="_cart-main_">
+                    <div class="_cart">
+                    <p class="bot-dot1"></p>
+                        <h2 class="ref1">{{this.product_title}}</h2>
+                        <div class="product-img"><a href="#"><img src="/images/paint.jpg" height="70" width="70"alt=""></a></div>
+                        <p class="priOr">{{this.product_price}} <span>руб</span></p>
+                        <div class="tit">Количество: {{this.product_quantity}} шт.</div>
+                    </div>
+                    <p class="bot-dot1"></p>
+                </div>
+            {{/each}}
+        </div>
+            <div class="total">Итого: {{this.total}}</div>
+            <div class="subm"><a href="/order/delete/{{this._id}}" class="orderDel">Удалить заказ</a></div>
+        {{/each}}
+    
+    {{else}}
+        <div class="txt2"><p>Вы пока ничего не добавили в заказ((</p></div>
+    {{/if}}
+    <a href="/" class="home">Вернуться на главную</a>
+    {{> footer}}
+</body>
+</html>
+
+
+        {{#each carts}}
+        <div class="_cart-main">
+            <div class="_cart">
+            <p class="bot-dot1"></p>
+                    <h2 class="ref1">{{this.product_title}}</h2>
+                    <div class="product-img"><a href="#"><img src="/images/paint.jpg" height="70" width="70"alt=""></a></div>
+                    <p class="pri">{{this.product_price}} <span>руб</span><span class="plusMinus"><a href="/cart/minus/{{this.product_id}}"><img src="/images/minus.png"  class="minus" height="28" width="28" alt=""></a><a href="/cart/plus/{{this.product_id}}"><img src="/images/plus.png" class="plus" height="28" width="28" alt=""></a></span></p>
+                    <div class="tit">Количество: {{this.product_quantity}} шт.</div>
+            </div>
+            <p class="bot-dot1"></p>
+        </div>
+        {{/each}}
+    </div>

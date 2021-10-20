@@ -1,0 +1,21 @@
+{{> head}}
+<body>
+    {{> navbar}}
+    <form action="/products/edit" method="post">
+        <div class="ts">
+        <input type="hidden" name="_id" value="{{product._id}}" class="vvod">
+        <label class="txt2">Название</label><br><br>
+        <input name="title" value="{{product.title}}" class="vvod"><br><br>
+        <label class="txt2">Описание</label><br><br>
+        <input name="description" value="{{product.description}}" class="vvod"><br><br>
+        <label class="txt2">Цена</label><br><br>
+        <input name="price" value="{{product.price}}" class="vvod"><br><br>
+        <label class="txt2">Количество</label><br><br>
+        <input name="quantity" value="{{product.quantity}}" class="vvod"><br><br>
+        <div class="sub"><input type="submit" value="Отправить" class="submit"></div>
+        </div>
+    </form>
+    <a href="/products" class="home">С списку товаров</a>
+    {{> footer}}
+</body>
+</html>

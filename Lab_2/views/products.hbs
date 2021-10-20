@@ -1,0 +1,18 @@
+{{> head}}
+<body>
+    {{> navbar}}
+    <a href="/products/create" class="home">Добавить товар</a>
+    <table class="table">
+        <tr><th class="txt1">Название</th><th class="txt1">Описание</th><th class="txt1">Цена</th><th class="txt1">Количетво</th><th class="txt1">Обновить</th><th class="txt1">Удалить</th></tr>
+        {{#each products}}
+            <tr><td class="txt">{{this.title}}</td><td class="txt">{{this.description}}</td><td class="txt">{{this.price}}</td><td class="txt">{{this.quantity}}</td>
+            <td><a href="/products/edit/{{this._id}}" class="update">Update</a></td>
+            <td><a href="/products/delete/{{this._id}}" class="delete">Delete</a></td></tr>
+            
+        {{/each}}
+    </table>
+    <a href="/" class="home">Вернуться на главную</a>
+    {{> footer}}
+    
+</body>
+</html>

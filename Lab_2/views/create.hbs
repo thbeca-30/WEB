@@ -1,0 +1,20 @@
+{{> head}}
+<body>
+    {{> navbar}}
+    <form action="postProduct" method="post">
+        <div class="ts">
+        <label class="txt2">Название</label><br><br>
+        <input name="title" class="vvod"><br><br>
+        <label class="txt2">Описание</label><br><br>
+        <input name="description" class="vvod"><br><br>
+        <label class="txt2">Цена</label><br><br>
+        <input name="price" class="vvod"><br><br>
+        <label class="txt2">Количество</label><br><br>
+        <input name="quantity" class="vvod"><br><br>
+        </div>
+        <div class="sub"><input type="submit" value="Отправить" class="submit"></div>
+    </form>
+    <a href="/products" class="home">К списку товаров</a>
+    {{> footer}}
+</body>
+</html>
