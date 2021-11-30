@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-var findOneOrCreate = require('mongoose-find-one-or-create');
+var findOneOrCreate = require('mongoose-find-one-or-create')
 const Schema = mongoose.Schema;
 
 const cartSchema = new Schema({
@@ -8,6 +8,6 @@ const cartSchema = new Schema({
     product_price: Number,
     product_quantity: Number,
     
-});
+})
 cartSchema.plugin(findOneOrCreate);
-module.exports = mongoose.model('Cart', cartSchema);
+module.exports = mongoose.model('Cart', cartSchema)

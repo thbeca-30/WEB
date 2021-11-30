@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "thbeca_30",
+  "MongoUri": "mongodb+srv://thbeca_30:12345@cluster0.5en7f.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}

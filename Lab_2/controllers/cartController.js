@@ -13,7 +13,7 @@ exports.takeToCart = function(request, response){
                 const newCart = {product_id: data._id, product_title: data.title, product_price: data.price, product_quantity: _cart.product_quantity + 1};
                 Cart.findOneAndUpdate({product_id : data._id}, newCart, {new : true}, function(err){
                     if(err) return response.sendStatus(404);
-                    response.redirect('/cart');
+                    response.redirect('/catalog');
                 });
             });
 
