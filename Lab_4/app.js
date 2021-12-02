@@ -8,7 +8,6 @@ const app = express()
 app.use(express.json({extended: true}))
 
 app.use('/api/auth', require('./routes/auth.routes'))
-app.use('/api/link', require('./routes/link.routes'))
 app.use('/api/home', require('./routes/home.routes'))
 app.use('/api/products', require('./routes/product.routes'))
 app.use('/api/cart', require('./routes/cart.routes'))
